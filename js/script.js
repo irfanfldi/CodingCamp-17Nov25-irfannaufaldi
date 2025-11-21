@@ -53,7 +53,7 @@ if (form) {
             <p><strong>Nama:</strong> ${name}</p>
             <p><strong>Jenis Kelamin:</strong> ${jenis}</p>
             <p><strong>Tanggal Lahir:</strong> ${new Date(tanggal).toLocaleDateString('id-ID')}</p>
-            <p><strong>Pesan:</strong Sundanese ${pesan}</p>
+            <p><strong>Pesan:</strong> ${pesan}</p>
         `;
         
         document.querySelector('.success-message').style.display = 'block';
@@ -61,7 +61,7 @@ if (form) {
     });
 }
 
-// Nav active on scroll (bonus biar makin keren)
+
 window.addEventListener('scroll', () => {
     let current = '';
     const sections = document.querySelectorAll('section');

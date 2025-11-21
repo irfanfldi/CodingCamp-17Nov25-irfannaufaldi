@@ -18,7 +18,7 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#profile">Profile</a></li>
                 <li><a href="#hq">Menu</a></li>
-                <li><a href="#contact">Message Us</a></li>
+                <li><a href="#contact">Contact Us</a></li>
             </ul>
             <div class="menu-toggle">
                 <span></span><span></span><span></span>
@@ -94,21 +94,23 @@
     <!-- Message Us (Contact) -->
     <section id="contact" class="contact-section">
         <h2 class="contact-title">Message Us</h2>
+        <p class="contact-p">Brew a conversation with us. Drop a message, and we’ll get back to you.</p>
+        
         <div class="contact-content">
             <form id="contact-form">
-            <div class="form-group"><label>Nama</label><input type="text" id="nama" required placeholder="Tulis disini..."></div>
+            <div class="form-group"><label>Nama</label><input type="text" id="nama" required placeholder="Tulis nama disini..."></div>
             <div class="form-group"><label>Jenis Kelamin</label>
                 <select id="kelamin" required><option value="">Pilih</option><option>Laki-laki</option><option>Perempuan</option></select>
         </div>
             <div class="form-group"><label>Tanggal Lahir</label><input type="date" id="lahir" required></div>
-            <div class="form-group"><label>Pesan</label><textarea id="pesan" rows="5" required></textarea></div>
+            <div class="form-group"><label>Pesan</label><textarea id="pesan" rows="5" required placeholder="Tulis pesan disini..."></textarea></div>
                 <button type="submit" class="btn">Submit</button>
                 <div class="success-message" style="display:none;margin-top:15px;">Terima kasih! Pesan kamu sudah kami terima</div>
             </form>
 
             <div class="info-box">
                 <h3>Current Time</h3>
-                <p id="current-time">21 November 2025</p>
+                <p id="current-time"></p>
                 <h3>Submitted Message</h3>
                 <div id="submitted-data"><p>Belum ada data.</p></div>
             </div>
@@ -116,9 +118,9 @@
     </section>
 
     <footer>
-        <p>© 2025 RevoU - Created with passion</p>
+        <p>© 2025 Irfan Naufaldi - Created with passion</p>
     </footer>
-
+  <!-- JavaScript -->
     <script src="js/script.js"></script>
 </body>
 </html>

@@ -3,7 +3,6 @@ body{font-family:helvetica;line-height:1.7;background:#dbd8d8;color:#333;overflo
 
 /* NAVIGATION */
 nav{
-    
     top:0;
     width:100%;
     z-index:1000;
@@ -12,6 +11,7 @@ nav{
     backdrop-filter: blur(4px);
     box-shadow: 0 4px 20px rgba(0,0,0,0.3);
     transition: all .4s;
+    overflow: hidden;
 }
 .nav-container{
     max-width:1400px;
@@ -100,13 +100,37 @@ nav{
 }
 .typing-text{
     font-size:1.6rem;
-    color:rgba(247, 148, 0, 0.747);font-weight:600;position:relative;height:60px}
-.text-option{position:absolute;width:55%;opacity:0;animation:textCycle 12s infinite}
+    color:rgba(247, 148, 0, 0.747);
+    font-weight:600;
+    position:relative;
+    height:60px}
+.text-option{
+    position:absolute;
+    width:55%;
+    opacity:0;
+    animation:
+    textCycle 12s infinite}
 .text-option:nth-child(1){animation-delay:0s}
 .text-option:nth-child(2){animation-delay:4s}
-@keyframes textCycle{0%,100%{opacity:0;transform:translateY(20px)}10%,25%{opacity:1;transform:translateY(0)}33%{opacity:0;transform:translateY(-20px)}}
-.cta-btn{background:#44140f;color:#fff;padding:1rem 2.5rem;border:none;border-radius:50px;font-size:1.2rem;cursor:pointer;transition:.3s;display:inline-block;text-decoration:none}
-.cta-btn:hover{background:#4e4746;transform:translateY(-4px);box-shadow:0 15px 30px rgba(231,76,60,.3)}
+@keyframes textCycle
+{0%,100%{opacity:0;transform:translateY(20px)}10%,25%{opacity:1;transform:translateY(0)}33%{opacity:0;transform:translateY(-20px)}}
+.cta-btn{
+    background:#44140f;
+    color:#fff;
+    padding:1rem 2.5rem;
+    border:none;
+    border-radius:50px;
+    font-size:1.2rem;
+    cursor:pointer;
+    transition:.3s;
+    display:inline-block;
+    text-decoration:none
+}
+.cta-btn:hover{
+    background:#4e4746;
+    transform:translateY(-4px);
+    box-shadow:0 15px 30px rgba(231,76,60,.3)
+}
 
 /* COMPANY PROFILE SECTION */
 .company-profile-section {
@@ -179,30 +203,7 @@ nav{
     border-radius: 20px;
     box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 }
-
-/* Responsive HP */
-@media (max-width: 768px) {
-    .company-grid {
-        flex-direction: column;
-        text-align: center;
-    }
-    .highlight {
-        font-size: 1.3rem; 
-        padding: 30px 20px;
-        width: 95%;
-    }
-    .company-text {
-        text-align: center;
-    }
-    .stats {
-        gap: 30px;
-    }
-    .stat h3 {
-        font-size: 2.5rem;
-    }
-}
-
-/* OUR PRODUCT */
+/* OUR PRODUCT(menu) */
 .product-section {
     padding: 50px 20px;
     background: url('https://i.pinimg.com/736x/05/d1/cc/05d1cc219413102a4bcfc9f3d24dea2f.jpg') center/cover fixed;
@@ -263,29 +264,114 @@ nav{
     color: #ac641d;
     text-shadow: 2px 2px 2px rgba(0,0,0,0.7);
 }
-
-/* Responsif: di HP jadi 1 kolom */
-@media (max-width: 768px) {
-    .product-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-    .product-item img { height: 250px; }
+/* CONTACT */
+.contact-section {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    padding: 0px 20px;
+    text-align: center;
+    background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), 
+                url('https://img.freepik.com/free-photo/abstract-blur-coffee-shop-cafe-interior_74190-6342.jpg?semt=ais_hybrid&w=740&q=80') center/cover no-repeat fixed;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    bos-sizing: border-box;
+    overflow: hidden;
 }
 
-/* CONTACT */
-.contact-section{width:100vw;margin-left:calc(-50vw + 50%);background:linear-gradient(135deg,#f8f9fa,#fff);padding:120px 20px}
-.contact-title{font-size:3.5rem;margin-bottom:3rem}
-.contact-content{max-width:1100px;margin:0 auto;display:flex;gap:60px;flex-wrap:wrap;align-items:flex-start}
-form,.info-box{flex:1;min-width:350px}
-.form-group{margin-bottom:25px}
-label{display:block;margin-bottom:10px;font-weight:600;color:#2c3e50}
-input,select,textarea{width:100%;padding:15px;border:2px solid #eee;border-radius:12px;font-size:1rem;transition:.3s}
-input:focus,select:focus,textarea:focus{outline:none;border-color:#e74c3c;box-shadow:0 0 0 4px rgba(231,76,60,.1)}
-.btn{background:#e74c3c;color:#fff;padding:16px 50px;font-size:1.2rem;border:none;border-radius:50px;cursor:pointer;transition:.3s;position:relative;overflow:hidden}
-.btn:hover{background:#c0392b;transform:translateY(-4px);box-shadow:0 15px 30px rgba(231,76,60,.3)}
-.info-box{background:#fff;padding:35px;border-radius:20px;box-shadow:0 10px 40px rgba(0,0,0,.08)}
-.success-message{background:#d4edda;color:#155724;padding:15px;border-radius:8px;margin-top:15px;border:1px solid #c3e6cb}
+.contact-title {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    text-align: center;
+}
+.contact-p {
+    font-size: 1.2rem;
+    color: #fcfbfb;
+    margin-bottom: 40px;
+}
+.contact-content {
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Form */
+form {
+    background: rgb(252, 251, 251);
+    padding: 50px 40px;
+    border-radius: 20px;
+    max-width: 400px;
+    margin-top:30px ;
+    margin-bottom: 40;
+    margin: auto;
+    animation: fadeInUp 1s ease;
+}
+
+form .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+
+}
+input, select, textarea {
+    width: 100%;
+    padding: 18px 20px;
+    border: 2px solid #ddd;
+    border-radius: 16px;
+    font-size: 1.1rem;
+    background: #fcfcfc;
+    transition: all 0.4s ease;
+    margin-bottom: 10px;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #cfcbca;
+    background: rgb(241, 239, 239);
+    box-shadow: 0 0 0 5px rgba(233, 227, 226, 0.15);
+    transform: translateY(-3px);
+}
+
+.btn {
+    background: linear-gradient(45deg, hsl(7, 27%, 18%), hsl(22, 76%, 5%));
+    color: rgb(248, 241, 241);
+    padding: 10px 50px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.4s; ease;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(14, 9, 8, 0.5);
+}
+
+/* Info box */
+.info-box {
+    background: rgba(255, 255, 255, 0.97);
+    padding: 30px 35px;                    
+    border-radius: 28px;
+    max-width: 420px;
+    width: 100%;
+    margin: 30px auto;                  
+    text-align: left;
+    animation: fadeInUp 1s ease 0.2s both;
+    backdrop-filter: blur(10px);
+}
+
+/* Animasi masuk */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
 
 /* FOOTER */
 footer{
@@ -293,78 +379,67 @@ footer{
     color:#ecf0f1;
     text-align:center;
     padding:20px;
-    font-size:1rem}
-
-/* ANIMASI */
-@keyframes fadeInUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
-
-/* RESPONSIVENESS */
+    font-size:1rem
+}
 @media (max-width: 768px) {
-    .nav-container {
-        padding: 0 20px;
-        justify-content: space-between;
-    }
-    .logo span {
-        font-size: 1.3rem;
-    }
+
+    /* PAKSA MENU KELIHATAN DI HP */
     .nav-links {
-        position: fixed;
-        top: 70px;
-        left: -100%;
-        width: 100%;
-        height: calc(100vh - 70px);
-        background: rgba(255,255,255,0.98);
-        backdrop-filter: blur(10px);
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        padding-top: 50px;
-        transition: left 0.4s ease;
-        gap: 30px;
+    display: flex !important;
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 80px);
+    background:linear-gradient(45deg, hsl(15, 2%, 40%), hsl(24, 9%, 90%));
+    padding-bottom: 50px;
+    transition: left 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    border-radius: 20px;
+    gap: 150px;
+
+}
+    .nav-links.active {
+        left: 0;
+        transition: left 0.5s cubic-bezier(0.32, 0, 0.67, 0);
     }
+
     .nav-links a {
-        font-size: 1.4rem;
-        padding: 15px 30px;
+        color: hsl(18, 83%, 9%);
+        font-size: 1.0;
+        font-weight: 600;
+        padding: 10px 0;
+        width: 100%;
+        text-align: center;
+        opacity: 1 !important;
     }
+
+    /* Hamburger */
     .menu-toggle {
         display: flex;
         flex-direction: column;
-        gap: 5px;
+        gap: 6px;
         z-index: 1001;
     }
-    .menu-toggle span {
-        transition: all 0.3s;
-    }
-    .menu-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(7px, 7px); }
-    .menu-toggle.active span:nth-child(2) { opacity: 0; }
-    .menu-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(7px, -7px); }
 
-    .hero h1{
-        font-size: 2.5rem !important;
+    .menu-toggle span {
+        width: 28px;
+        height: 3px;
+        background: #fff;
+        transition: 0.3s;
     }
-    .typing-text {
-        font-size: 1.2rem !important;
-        height: 80px;
-    }
-    .locations {
+
+    .menu-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(8px, 8px); }
+    .menu-toggle.active span:nth-child(2) { opacity: 0; }
+    .menu-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(8px, -8px); }
+
+    /* Contact*/
+    .contact-content {
         flex-direction: column;
         align-items: center;
         gap: 40px;
     }
-    .location-circle {
-        width: 200px;
-        height: 200px;
-    }
-
-    .contact-content {
-        flex-direction: column;
-        gap: 40px;
-    }
-    .contact-title {
-        font-size: 2.5rem !important;
-    }
-
-    section, .hq-section, .contact-section {
-        padding: 80px 20px !important;
+    form, .info-box {
+        max-width: 92%;
+        margin: 20px auto;
     }
 }
