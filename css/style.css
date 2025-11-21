@@ -37,7 +37,7 @@ nav{
     width: 60px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid rgba(255, 255, 255, 0.3); /* optional: border tipis putih */
+    border: 3px solid rgba(255, 255, 255, 0.3);
     background-color: transparent !important;
 }  
 .logo:hover img{
@@ -108,8 +108,7 @@ nav{
     position:absolute;
     width:55%;
     opacity:0;
-    animation:
-    textCycle 12s infinite}
+    animation:textCycle 12s infinite}
 .text-option:nth-child(1){animation-delay:0s}
 .text-option:nth-child(2){animation-delay:4s}
 @keyframes textCycle
@@ -133,14 +132,7 @@ nav{
 }
 
 /* COMPANY PROFILE SECTION */
-.company-profile-section {
-    padding: 80px 20px;
-    background:url('https://i.pinimg.com/736x/05/d1/cc/05d1cc219413102a4bcfc9f3d24dea2f.jpg') center/cover no-repeat fixed;
-    position: relative;
-    text-align: center;
-    overflow: hidden;
-}
-.compay-profile::before 
+.company-profile::before {content:""} /* ditambahin biar ga error */
 .company-grid {
     max-width: 1200px;
     margin: 0 auto;
@@ -180,8 +172,7 @@ nav{
 .track-card {
     width: 320px;
     border-radius: 20px;
-    overflow: hidden;
-    overflow: hidden;
+    overflow: hidden; /* duplikat dihapus */
     box-shadow: 0 10px 0px rgba(12, 0, 0, 0.12);
     transition: all 0.4s ease;
     text-align: center;
@@ -203,7 +194,8 @@ nav{
     border-radius: 20px;
     box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 }
-/* OUR PRODUCT(menu) */
+
+/* OUR PRODUCT */
 .product-section {
     padding: 50px 20px;
     background: url('https://i.pinimg.com/736x/05/d1/cc/05d1cc219413102a4bcfc9f3d24dea2f.jpg') center/cover fixed;
@@ -264,6 +256,7 @@ nav{
     color: #ac641d;
     text-shadow: 2px 2px 2px rgba(0,0,0,0.7);
 }
+
 /* CONTACT */
 .contact-section {
     width: 100vw;
@@ -275,7 +268,7 @@ nav{
     height: auto;
     display: flex;
     flex-direction: column;
-    bos-sizing: border-box;
+    box-sizing: border-box; /* diperbaiki dari bos-sizing */
     overflow: hidden;
 }
 
@@ -302,20 +295,19 @@ nav{
 
 /* Form */
 form {
-    background: rgb(252, 251, 251);
-    padding: 50px 40px;
-    border-radius: 20px;
-    max-width: 400px;
-    margin-top:30px ;
-    margin-bottom: 40;
-    margin: auto;
-    animation: fadeInUp 1s ease;
+    background: rgba(255, 255, 255, 0.97);
+    padding: 30px 35px;                    
+    border-radius: 28px;
+    max-width: 420px;
+    width: 100%;              
+    text-align: left;
+    animation: fadeInUp 1s ease 0.2s both;
+    backdrop-filter: blur(10px);
 }
 
 form .form-group {
     margin-bottom: 20px;
     text-align: left;
-
 }
 input, select, textarea {
     width: 100%;
@@ -345,7 +337,7 @@ input:focus, select:focus, textarea:focus {
     border: none;
     border-radius: 50px;
     cursor: pointer;
-    transition: all 0.4s; ease;
+    transition: all 0.4s ease; /* diperbaiki */
     margin-top: 20px;
 }
 
@@ -382,64 +374,37 @@ footer{
     font-size:1rem
 }
 @media (max-width: 768px) {
-
-    /* PAKSA MENU KELIHATAN DI HP */
     .nav-links {
-    display: flex !important;
-    position: fixed;
-    top: 70px;
-    left: -100%;
-    width: 100%;
-    height: calc(100vh - 80px);
-    background:linear-gradient(45deg, hsl(15, 2%, 40%), hsl(24, 9%, 90%));
-    padding-bottom: 50px;
-    transition: left 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    border-radius: 20px;
-    gap: 150px;
-
-}
+        display: flex !important;
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background:linear-gradient(45deg, hsl(15, 2%, 40%), hsl(24, 9%, 90%));
+        padding-bottom: 50px;
+        transition: left 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        border-radius: 5px;
+        gap: 150px;
+    }
     .nav-links.active {
         left: 0;
         transition: left 0.5s cubic-bezier(0.32, 0, 0.67, 0);
     }
-
     .nav-links a {
         color: hsl(18, 83%, 9%);
-        font-size: 1.0;
+        font-size: 1rem; /* diperbaiki dari 1.0 */
         font-weight: 600;
         padding: 10px 0;
         width: 100%;
         text-align: center;
         opacity: 1 !important;
     }
-
-    /* Hamburger */
-    .menu-toggle {
-        display: flex;
-        flex-direction: column;
-        gap: 6px;
-        z-index: 1001;
-    }
-
-    .menu-toggle span {
-        width: 28px;
-        height: 3px;
-        background: #fff;
-        transition: 0.3s;
-    }
-
+    .menu-toggle {display: flex;flex-direction: column;gap: 6px;z-index: 1001;}
+    .menu-toggle span {width: 28px;height: 3px;background: #fff;transition: 0.3s;}
     .menu-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(8px, 8px); }
     .menu-toggle.active span:nth-child(2) { opacity: 0; }
     .menu-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(8px, -8px); }
-
-    /* Contact*/
-    .contact-content {
-        flex-direction: column;
-        align-items: center;
-        gap: 40px;
-    }
-    form, .info-box {
-        max-width: 92%;
-        margin: 20px auto;
-    }
+    .contact-content {flex-direction: column;align-items: center;gap: 40px;}
+    form, .info-box {max-width: 92%;margin: 20px auto;}
 }

@@ -1,8 +1,8 @@
-let userName = ""; // Tambah ini biar tidak error
+let userName = ""; 
 
 welcomeMessage();
 updateClock();
-setInterval(updateClock, 1000); // Update jam setiap detik
+setInterval(updateClock, 1000); 
 
 function welcomeMessage() {
     if (!userName) {
