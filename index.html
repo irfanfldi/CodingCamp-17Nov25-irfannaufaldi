@@ -1,97 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yama Company</title>
-
-    <!-- CSS External -->
+    <title>RevoU - Digital Excellence</title>
     <link rel="stylesheet" href="css/style.css">
-
-    <!-- Tailwind CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-
 <body>
-    <!-- Header Content -->
-    <header class="main-header p-[8px]">
-        <!-- Logo Icon -->
-        <div class="logo-icon"></div>
 
-        <!-- Navigation Menu -->
-        <nav class="flex">
-            <a class="border p-[4px] rounded" href="#home-page">Home</a>
-            <a class="border p-[4px] rounded" href="#our-profile-page">Our Profile</a>
-            <a class="border p-[4px] rounded" href="#portfolio-page">Portfolio</a>
-            <a class="border p-[4px] rounded" href="#message-us-page">Message Us</a>
-        </nav>
-    </header>
+    <nav>
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <img src="https://uploads-ssl.webflow.com/61af164800e38cf1b6c60b55/62bbfbb189b700fc937e2e70_Logo-RevoU-5.png" alt="RevoU Logo" width="50">
+                <span>RevoU</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#profile">Our Profile</a></li>
+                <li><a href="#hq">Our Headquarter</a></li>
+                <li><a href="#contact">Message Us</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
 
-    <hr />
+    <!-- Main Section -->
+    <section id="home" class="hero">
+        <div class="diagonal-grid"></div>
+        <div class="hero-content">
+            <h1>Hi, Welcome To RevoU</h1>
+            <p class="typing-text">
+                <span class="text-option">Belajar skill digital masa depan</span>
+                <span class="text-option">Bangun karir impian bersama mentor terbaik</span>
+                <span class="text-option">Join ribuan alumni sukses RevoU</span>
+            </p>
+        </div>
+    </section>
 
-    <!-- Main Content -->
-    <main>
-        <!-- Home Page -->
-        <section id="home-page" class="min-h-[500px] text-center content-center">
-            <h2 class="text-xl font-bold" id="welcome-speech">Welcome to Our Website</h2>
-            <p class="mt-2">We are glad to have you here. Explore our services and offerings.</p>
-        </section>
-
-        <hr />
-
-        <!-- Our Profile Page -->
-        <section id="our-profile-page" class="min-h-[500px] text-center content-center">
-            <h2 class="text-xl font-bold">About Yama Company</h2>
-            <p class="mt-2">Yama Company is dedicated to providing top-notch services in various domains.</p>
-        </section>
-
-        <hr />
-
-        <!-- Portfolio Page -->
-        <section id="portfolio-page" class="min-h-[500px] text-center content-center">
-            <h2 class="text-xl font-bold">Our Portfolio</h2>
-            <p class="mt-2">Take a look at our diverse range of projects that showcase our skills and expertise.</p>
-        </section>
-
-        <hr />
-
-        <!-- Message Us Page -->
-        <section id="message-us-page" class="min-h-[500px] p-8">
-            <header>
-                <h2 class="text-xl font-bold">Message Us</h2>
-                <p class="mt-2">Have questions or want to work with us? Send us a message and we'll get back to you
-                    promptly.</p>
-            </header>
-
-            <form>
-                <div class="mb-4">
-                    <label class="block mb-2" for="name">Name:</label>
-                    <input class="w-full p-2 border rounded" type="text" id="name" name="name" required />
+    <!-- Profile Section -->
+    <section id="profile" class="company-profile-section">
+    <h2>Our Profile</h2>
+    
+    <div class="company-grid">
+        <div class="company-text">
+            <p class="highlight">RevoU adalah program intensif 6 bulan yang membantu kamu beralih karir ke dunia digital tanpa harus kuliah lagi.</p>
+            
+            <p>Kami fokus pada 3 jurusan paling dicari perusahaan saat ini:</p>
+            
+            <div class="tracks">
+                <div class="track">
+                    <strong>Product Management</strong><br>
+                    <small>Belajar bikin produk digital dari 0 sampai launch</small>
                 </div>
-                <div class="mb-4">
-                    <label class="block mb-2" for="email">Email:</label>
-                    <input class="w-full p-2 border rounded" type="email" id="email" name="email" required />
+                <div class="track">
+                    <strong>Data Analytics</strong><br>
+                    <small>Belajar SQL, Python, Dashboard, dan storytelling data</small>
                 </div>
-                <div class="mb-4">
-                    <label class="block mb-2" for="message">Message:</label>
-                    <textarea class="w-full p-2 border rounded" id="message" name="message" rows="5"
-                        required></textarea>
+                <div class="track">
+                    <strong>Software Engineering (Full-Stack)</strong><br>
+                    <small>Belajar JavaScript, React, Node.js, dan bangun aplikasi real</small>
                 </div>
-                <button class="px-4 py-2 bg-blue-500 text-white rounded" type="button">Send Message</button>
+            </div>
+
+            <div class="stats">
+                <div class="stat">
+                    <h3>3.000+</h3>
+                    <p>Alumni sukses</p>
+                </div>
+                <div class="stat">
+                    <h3>85%</h3>
+                    <p>Berhasil ganti karir dalam 6 bulan</p>
+                </div>
+                <div class="stat">
+                    <h3>500+</h3>
+                    <p>Perusahaan partner</p>
+                </div>
+            </div>
+
+            <a href="#contact" class="cta-btn">Gabung RevoU Sekarang</a>
+        </div>
+
+        <div class="company-image">
+            <img src="https://dibimbing-cdn.sgp1.cdn.digitaloceanspaces.com/media-strapi/e7bfce0167e650449efaabd3c13f6d64.webp" alt="RevoU Classroom">
+        </div>
+    </div>
+</section>
+
+    <!-- Our Headquarter -->
+    <section class="hq-section" id="hq">
+        <h2>Our Headquarter</h2>
+        <div class="locations">
+            <div class="location">
+                <div class="location-circle" style="background-image:url('https://image.idntimes.com/post/20190206/929420181018171711-1-27bf307d1783dc866527169bd6eb3ea9.jpg')">
+                    <div class="overlay-text">Jakarta</div>
+                </div>
+                <h3>Jakarta</h3>
+            </div>
+            <div class="location">
+                <div class="location-circle" style="background-image:url('https://images.bisnis.com/posts/2021/07/01/1412557/antarafoto-penerapan-psbb-di-bandung-raya-170420-agr-2a.jpg')">
+                    <div class="overlay-text">Bandung</div>
+                </div>
+                <h3>Bandung</h3>
+            </div>
+            <div class="location">
+                <div class="location-circle" style="background-image:url('https://images.tokopedia.net/blog-tokopedia-com/uploads/2018/04/wisata-surabaya.jpg')">
+                    <div class="overlay-text">Surabaya</div>
+                </div>
+                <h3>Surabaya</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Message Us (Contact) -->
+    <section id="contact" class="contact-section">
+        <h2 class="contact-title">Message Us</h2>
+        <div class="contact-content">
+            <form id="contact-form">
+                <div class="form-group"><label>Nama</label><input type="text" required placeholder="Tulis disini..."></div>
+                <div class="form-group"><label>Jenis Kelamin</label>
+                    <select required><option value="">Pilih</option><option>Laki-laki</option><option>Perempuan</option></select>
+                </div>
+                <div class="form-group"><label>Tanggal Lahir</label><input type="date" required></div>
+                <div class="form-group"><label>Pesan</label><textarea rows="5" required></textarea></div>
+                <button type="submit" class="btn">Submit</button>
+                <div class="success-message" style="display:none;margin-top:15px;">Terima kasih! Pesan kamu sudah kami terima</div>
             </form>
-        </section>
-    </main>
 
-    <hr />
+            <div class="info-box">
+                <h3>Current Time</h3>
+                <p id="current-time">Loading...</p>
+                <h3>Submitted Message</h3>
+                <div id="submitted-data"><p>Belum ada data.</p></div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Footer Content -->
     <footer>
-        <span> @2024 Yama Company</span>
+        <p>© 2025 RevoU - Created with passion</p>
     </footer>
 
-    <!-- Javascript External -->
     <script src="js/script.js"></script>
 </body>
-
 </html>
